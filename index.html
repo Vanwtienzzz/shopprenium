@@ -23,10 +23,8 @@
 
   <!-- Favicon -->
   <link rel="icon" href="https://shopprenium.webhop.me/logo.jpg" type="image/png">
-</head>
-
-  <!-- Logo mới được tạo cho trang web -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%2322d3ee' d='M50 0L100 25V75L50 100L0 75V25L50 0Z'/%3E%3Cpath fill='white' d='M50 15L85 32.5V67.5L50 85L15 67.5V32.5L50 15Z'/%3E%3Cpath fill='%230d1117' d='M50 22L78 36.5V63.5L50 78L22 63.5V36.5L50 22Z'/%3E%3C/svg%3E" type="image/svg+xml" />
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -98,15 +96,81 @@
       opacity: 1;
       transform: translateY(0);
     }
+     .modal-hidden {
+        display: none;
+    }
+
+    /* === CSS HIỆU ỨNG HOA ANH ĐÀO RƠI === */
+    #petal-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 9999;
+    }
+
+    .petal {
+        position: absolute;
+        top: -20px;
+        width: 15px;
+        height: 15px;
+        background-color: #ffc0cb; /* Màu hồng của cánh hoa */
+        border-radius: 1px 50% 50% 50%;
+        opacity: 0.9;
+        animation-name: fall, sway;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: infinite, infinite;
+        transform-origin: center center;
+    }
+    
+    .petal:nth-child(2n) {
+        background-color: #ffb6c1; /* Thêm một chút biến thể màu sắc */
+    }
+
+    .petal:nth-child(3n) {
+       transform: rotate(-30deg);
+    }
+    
+     .petal:nth-child(4n) {
+        width: 12px;
+        height: 12px;
+    }
+
+    .petal:nth-child(5n) {
+        animation-duration: 12s, 4s;
+    }
+
+
+    @keyframes fall {
+        to {
+            transform: translateY(105vh) rotate(720deg);
+        }
+    }
+
+    @keyframes sway {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(80px);
+        }
+    }
+    /* === KẾT THÚC CSS HIỆU ỨNG HOA ANH ĐÀO RƠI === */
+
   </style>
 </head>
-<body class="text-gray-300 antialiased">
+<body class="bg-gray-900 text-gray-300 antialiased">
   
+  <!-- Container cho hoa anh đào -->
+  <div id="petal-container"></div>
+
   <!-- Header -->
   <header class="header-blur sticky top-0 z-50">
     <div class="container mx-auto max-w-7xl px-5 py-4 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <!-- Đã thay thế logo cũ bằng SVG mới, đẹp và không bị lỗi -->
         <div class="w-9 h-9 flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full"><path fill="#22d3ee" d="M50 0L100 25V75L50 100L0 75V25L50 0Z"></path><path fill="white" d="M50 15L85 32.5V67.5L50 85L15 67.5V32.5L50 15Z"></path><path fill="#0d1117" d="M50 22L78 36.5V63.5L50 78L22 63.5V36.5L50 22Z"></path></svg>
         </div>
@@ -143,7 +207,6 @@
     <!-- Features Section -->
     <section id="uu-diem" class="mb-20 md:mb-28">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Đã thay thế các ảnh bằng SVG nội tuyến để không bị lỗi và tải nhanh hơn -->
             <div class="reveal card rounded-xl p-5 flex items-center gap-4">
                 <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center border border-blue-500/20">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -183,9 +246,8 @@
           <h3 class="text-lg font-bold mt-5 text-white">Netflix Premium</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Xem phim 4K Ultra HD, profile riêng tư, không quảng cáo.</p>
           <a href="netflix.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
 
         <!-- Spotify -->
@@ -196,9 +258,8 @@
           <h3 class="text-lg font-bold mt-5 text-white">Spotify Premium</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Nghe nhạc không quảng cáo, chất lượng âm thanh cao nhất.</p>
           <a href="spotify.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
 
         <!-- YouTube -->
@@ -209,9 +270,8 @@
           <h3 class="text-lg font-bold mt-5 text-white">YouTube Premium</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Xem video không quảng cáo, phát trong nền, tải video.</p>
           <a href="youtube.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
 
         <!-- ChatGPT Plus -->
@@ -221,10 +281,9 @@
           </div>
           <h3 class="text-lg font-bold mt-5 text-white">ChatGPT Plus</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Truy cập GPT-4o, DALL-E 3, tốc độ phản hồi nhanh hơn.</p>
-          <<a href="youtube.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+          <a href="youtube.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+            Mua ngay
+          </a>
         </div>
         
         <!-- Capcut Pro -->
@@ -235,9 +294,8 @@
           <h3 class="text-lg font-bold mt-5 text-white">Capcut Pro</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Chỉnh sửa video chuyên nghiệp, không watermark, nhiều hiệu ứng.</p>
          <a href="capcut.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
 
         <!-- Canva -->
@@ -248,9 +306,8 @@
           <h3 class="text-lg font-bold mt-5 text-white">Canva Pro</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Công cụ thiết kế đồ họa mạnh mẽ, kho tài nguyên khổng lồ.</p>
           <a href="canva.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
 
         <!-- Duolingo -->
@@ -261,9 +318,8 @@
           <h3 class="text-lg font-bold mt-5 text-white">Duolingo Plus</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Học ngoại ngữ không giới hạn, không quảng cáo, luyện thi.</p>
          <a href="duolingo.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
 
         <!-- Google One -->
@@ -274,9 +330,8 @@
           <h3 class="text-lg font-bold mt-5 text-white">Google One 2TB</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Lưu trữ đám mây an toàn, dung lượng lớn, kèm VPN.</p>
           <a href="ggone.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
 
         <!-- Cursor Pro -->
@@ -287,12 +342,11 @@
           <h3 class="text-lg font-bold mt-5 text-white">Cursor Pro</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Trình soạn thảo mã nguồn AI đầu tiên, xây dựng cho lập trình viên.</p>
           <a href="curror.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
         
-        <!-- ĐÃ THÊM: ChatGPT Pro -->
+        <!-- ChatGPT Pro -->
         <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #74AA9C; transition-delay: 450ms;">
           <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background-color: #10a37f;">
             <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="OpenAI / ChatGPT" src="https://cdn.simpleicons.org/openai/white" />
@@ -300,11 +354,9 @@
           <h3 class="text-lg font-bold mt-5 text-white">ChatGPT Pro</h3>
           <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Dành cho doanh nghiệp, ưu tiên các tính năng mới nhất.</p>
           <a href="chatgpt-pro.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
-   Mua ngay
-</a>
-
+            Mua ngay
+          </a>
         </div>
-
       </div>
     </section>
   </main>
@@ -337,12 +389,42 @@
         </div>
       </div>
       <div class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-border-color">
-       
         © 2025 PREMIUM SHOP. All Rights Reserved.
-<span id="view-count" class="ml-2 text-gray-400"></span>
+        <span id="view-count" class="ml-2 text-gray-400"></span>
       </div>
     </div>
   </footer>
+
+  <!-- Modal Thông Báo -->
+  <div id="notificationModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50">
+      <div class="bg-[#20242b] text-gray-200 rounded-xl shadow-2xl w-full max-w-lg transform transition-all duration-300 scale-100">
+          <div class="flex items-center justify-between p-5 border-b border-gray-700">
+              <h2 class="text-xl font-bold text-white">Thông Báo Chung</h2>
+              <button id="closeModalButton" class="text-gray-400 hover:text-white transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+              </button>
+          </div>
+          <div class="p-6 space-y-4 text-sm leading-relaxed">
+              <p><span class="text-red-500 mr-2">💥</span> Chào mừng bạn đã đến với shopprenium hệ thống seeding hàng đầu Việt Nam</p>
+              <p><span class="text-yellow-400 mr-2">⭐</span> Link Box <b class="text-blue-400">Zalo</b> Thông Báo 1 : <a href="https://zalo.me/g/oqrjcw821" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
+              <p><span class="text-yellow-400 mr-2">⭐</span> Link <b class="text-blue-400">Botchat</b> Thông Báo 2 : <a href="https://web.facebook.com/share/19DFeiofSn/?mibextid=wwXIfr&_rdc=1&_rdr" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
+              <p><b>Admin Support 24/7 Tại Zalo</b> : <a href="https://zalo.me/nvantien09" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
+              <ul class="list-inside list-disc space-y-2 pl-2 pt-2">
+                  <li>Đọc Kĩ Điều Khoản Trước Khi Mua Hàng</li>
+                  <li>Đơn Hàng Sẽ Được Hủy Trong 24-72h <b class="text-red-400">Nếu</b> Có Thể</li>
+                  <li>Hỗ Trợ Tăng Tốc, Đẩy Và Hủy Đơn Nếu Cần.</li>
+              </ul>
+              <p class="pt-2"><span class="text-red-500 mr-2">❤️</span> Chúc Quý Khách Sử Dụng Dịch Vụ Vui Vẻ, ShopPrenium Luôn Sẵn Sàng Hỗ Trợ Mọi Người <span class="ml-1">✨</span></p>
+          </div>
+          <div class="flex justify-end p-5">
+              <button id="confirmButton" class="bg-teal-600 text-white font-bold py-2.5 px-6 rounded-lg hover:bg-teal-700 transition-all duration-300 disabled:bg-gray-500 disabled:cursor-not-allowed">
+                  Tôi đã đọc (3)
+              </button>
+          </div>
+      </div>
+  </div>
 
   <script>
     // Intersection Observer để tạo hiệu ứng xuất hiện khi cuộn
@@ -356,150 +438,81 @@
     }, {
       threshold: 0.1
     });
-
     document.querySelectorAll('.reveal').forEach((el) => {
       observer.observe(el);
     });
+
+    // Script cho Modal
+    const modal = document.getElementById('notificationModal');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const confirmButton = document.getElementById('confirmButton');
+    const closeModal = () => {
+        modal.classList.add('modal-hidden');
+    };
+    closeModalButton.addEventListener('click', closeModal);
+    confirmButton.addEventListener('click', () => {
+        if (!confirmButton.disabled) {
+            closeModal();
+        }
+    });
+    let countdown = 3;
+    confirmButton.disabled = true;
+    const countdownInterval = setInterval(() => {
+        countdown--;
+        if (countdown > 0) {
+            confirmButton.textContent = `Tôi đã đọc (${countdown})`;
+        } else {
+            clearInterval(countdownInterval);
+            confirmButton.textContent = 'Tôi đã đọc';
+            confirmButton.disabled = false;
+            confirmButton.classList.remove('disabled:bg-gray-500', 'disabled:cursor-not-allowed');
+        }
+    }, 1000);
+
+    /* === SCRIPT HIỆU ỨNG HOA ANH ĐÀO RƠI === */
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('petal-container');
+        const numberOfPetals = 40; // Bạn có thể tăng/giảm số lượng cánh hoa
+
+        for (let i = 0; i < numberOfPetals; i++) {
+            let petal = document.createElement('div');
+            petal.className = 'petal';
+            
+            // Random vị trí bắt đầu, thời gian rơi, thời gian lắc lư và độ trễ
+            const startPosition = Math.random() * 100;
+            const fallDuration = Math.random() * 8 + 7; // từ 7 đến 15 giây
+            const swayDuration = Math.random() * 3 + 2; // từ 2 đến 5 giây
+            const delay = Math.random() * 10;
+            
+            petal.style.left = `${startPosition}vw`;
+            petal.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
+            petal.style.animationDelay = `${delay}s, ${delay}s`;
+            
+            container.appendChild(petal);
+        }
+    });
+    /* === KẾT THÚC SCRIPT HIỆU ỨNG HOA ANH ĐÀO RƠI === */
+
+    // Script chặn thao tác
+    (function(){
+      // Chặn chuột phải
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        // Thay vì alert, có thể tạo một thông báo tùy chỉnh đẹp hơn
+        console.log("Context menu is disabled.");
+      });
+
+      // Chặn các phím tắt
+      document.onkeydown = function(e) {
+        if (e.keyCode == 123 || // F12
+            (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67)) || // Ctrl+Shift+I/C
+            (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83)) // Ctrl+U/S
+        ) {
+          console.log("This action is disabled.");
+          return false;
+        }
+      };
+    })();
   </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng Thông Báo</title>
-    <!-- Tích hợp Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tùy chỉnh font chữ Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Sử dụng font Inter làm font chữ mặc định */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Style cho modal khi ẩn */
-        .modal-hidden {
-            display: none;
-        }
-    </style>
-</head>
-<body class="bg-gray-900 flex items-center justify-center min-h-screen">
-
-    <!-- Modal Thông Báo -->
-    <div id="notificationModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50">
-        <div class="bg-[#20242b] text-gray-200 rounded-xl shadow-2xl w-full max-w-lg transform transition-all duration-300 scale-100">
-            <!-- Phần đầu của Modal -->
-            <div class="flex items-center justify-between p-5 border-b border-gray-700">
-                <h2 class="text-xl font-bold text-white">Thông Báo Chung</h2>
-                <button id="closeModalButton" class="text-gray-400 hover:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Nội dung Modal -->
-            <div class="p-6 space-y-4 text-sm leading-relaxed">
-                <p><span class="text-red-500 mr-2">💥</span> Chào mừng bạn đã đến với shopprenium hệ thống seeding hàng đầu Việt Nam</p>
-                <p><span class="text-yellow-400 mr-2">⭐</span> Link Box <b class="text-blue-400">Zalo</b> Thông Báo 1 : <a href="https://zalo.me/g/oqrjcw821" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
-                <p><span class="text-yellow-400 mr-2">⭐</span> Link <b class="text-blue-400">Botchat</b> Thông Báo 2 : <a href="https://web.facebook.com/share/19DFeiofSn/?mibextid=wwXIfr&_rdc=1&_rdr" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
-                <p><b>Admin Support 24/7 Tại Zalo</b> : <a href="https://zalo.me/nvantien09" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
-                
-                <ul class="list-inside list-disc space-y-2 pl-2 pt-2">
-                    <li>Đọc Kĩ Điều Khoản Trước Khi Mua Hàng</li>
-                    <li>Đơn Hàng Sẽ Được Hủy Trong 24-72h <b class="text-red-400">Nếu</b> Có Thể</li>
-                    <li>Hỗ Trợ Tăng Tốc, Đẩy Và Hủy Đơn Nếu Cần.</li>
-                </ul>
-
-                <p class="pt-2"><span class="text-red-500 mr-2">❤️</span> Chúc Quý Khách Sử Dụng Dịch Vụ Vui Vẻ, ShopPrenium Luôn Sẵn Sàng Hỗ Trợ Mọi Người <span class="ml-1">✨</span></p>
-            </div>
-
-            <!-- Phần chân của Modal -->
-            <div class="flex justify-end p-5">
-                <button id="confirmButton" class="bg-teal-600 text-white font-bold py-2.5 px-6 rounded-lg hover:bg-teal-700 transition-all duration-300 disabled:bg-gray-500 disabled:cursor-not-allowed">
-                    Tôi đã đọc (3)
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const modal = document.getElementById('notificationModal');
-        const closeModalButton = document.getElementById('closeModalButton');
-        const confirmButton = document.getElementById('confirmButton');
-
-        // Hàm đóng modal
-        const closeModal = () => {
-            modal.classList.add('modal-hidden');
-        };
-
-        // Gán sự kiện click cho các nút đóng
-        closeModalButton.addEventListener('click', closeModal);
-        confirmButton.addEventListener('click', () => {
-            // Chỉ đóng nếu nút đã được kích hoạt
-            if (!confirmButton.disabled) {
-                closeModal();
-            }
-        });
-
-        // Xử lý đếm ngược
-        let countdown = 3;
-        confirmButton.disabled = true;
-
-        const countdownInterval = setInterval(() => {
-            countdown--;
-            if (countdown > 0) {
-                confirmButton.textContent = `Tôi đã đọc (${countdown})`;
-            } else {
-                clearInterval(countdownInterval);
-                confirmButton.textContent = 'Tôi đã đọc';
-                confirmButton.disabled = false;
-                confirmButton.classList.remove('disabled:bg-gray-500', 'disabled:cursor-not-allowed');
-            }
-        }, 1000);
-
-    </script>
-
-</body>
-<script>
-(function(){
-  // Chặn chuột phải
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    alert("🚫 Không được phép!");
-  });
-
-  // Chặn F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S, Ctrl+Shift+C
-  document.onkeydown = function(e) {
-    if (e.keyCode == 123) { // F12
-      alert("🚫 DevTools bị vô hiệu hóa!");
-      return false;
-    }
-    if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67)) {
-      alert("🚫 DevTools bị vô hiệu hóa!");
-      return false;
-    }
-    if (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83)) {
-      alert("🚫 Nút này đã bị khóa!");
-      return false;
-    }
-  };
-
-  // Chặn mở DevTools bằng cách phát hiện thay đổi console
-  setInterval(function() {
-    var before = new Date().getTime();
-    debugger;
-    var after = new Date().getTime();
-    if (after - before > 200) {
-      alert("🚫 DevTools đang mở!");
-      window.location.href = "about:blank"; // đá ra trắng
-    }
-  }, 1000);
-})();
-</script>
-
-</html>
-
