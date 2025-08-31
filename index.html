@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PREMIUM SHOP - Tài Khoản Premium Giá Rẻ</title>
+  <meta name="description" content="PREMIUM SHOP chuyên cung cấp tài khoản Premium Netflix, Spotify, Youtube Premium... uy tín, giá rẻ, giao dịch nhanh chóng.">
+
+  <!-- Open Graph / Facebook / Zalo / Telegram -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shopprenium.webhop.me/">
+  <meta property="og:title" content="PREMIUM SHOP - Tài Khoản Premium Giá Rẻ">
+  <meta property="og:description" content="Cung cấp tài khoản Premium Netflix, Spotify, Youtube Premium... uy tín, giá rẻ.">
+  <meta property="og:image" content="https://shopprenium.webhop.me/logo.jpg">
+  <meta property="og:site_name" content="PREMIUM SHOP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://shopprenium.webhop.me/">
+  <meta name="twitter:title" content="PREMIUM SHOP - Tài Khoản Premium Giá Rẻ">
+  <meta name="twitter:description" content="Cung cấp tài khoản Premium Netflix, Spotify, Youtube Premium... uy tín, giá rẻ.">
+  <meta name="twitter:image" content="https://shopprenium.webhop.me/logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://shopprenium.webhop.me/logo.jpg" type="image/png">
+</head>
+
+  <!-- Logo mới được tạo cho trang web -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%2322d3ee' d='M50 0L100 25V75L50 100L0 75V25L50 0Z'/%3E%3Cpath fill='white' d='M50 15L85 32.5V67.5L50 85L15 67.5V32.5L50 15Z'/%3E%3Cpath fill='%230d1117' d='M50 22L78 36.5V63.5L50 78L22 63.5V36.5L50 22Z'/%3E%3C/svg%3E" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root { 
+      --bg-primary: #0D1117;
+      --bg-secondary: #161B22;
+      --border-color: #30363D;
+      --brand-cyan: #22d3ee;
+      --brand-teal: #14b8a6;
+      color-scheme: dark; 
+    }
+    html, body { 
+      background-color: var(--bg-primary); 
+      font-family:'Be Vietnam Pro', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif; 
+    }
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 3rem 3rem;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    .header-blur { 
+      background: rgba(13, 17, 23, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .card { 
+      background: var(--bg-secondary); 
+      border: 1px solid var(--border-color); 
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; 
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover { 
+      transform: translateY(-8px); 
+      border-color: var(--brand-color, var(--brand-cyan));
+      box-shadow: 0 0 25px -5px var(--brand-color, var(--brand-cyan));
+    }
+    .badge { 
+      border: 1px solid rgba(255,255,255,.1); 
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); 
+    }
+    .brand-icon { width: 3.5rem; height: 3.5rem; object-fit: contain; }
+    .price-button {
+      background: linear-gradient(45deg, var(--brand-cyan), var(--brand-teal));
+      transition: all .3s ease;
+      box-shadow: 0 4px 15px -5px rgba(34, 211, 238, 0.4);
+    }
+    .card:hover .price-button {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px -5px rgba(34, 211, 238, 0.6);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="text-gray-300 antialiased">
+  
+  <!-- Header -->
+  <header class="header-blur sticky top-0 z-50">
+    <div class="container mx-auto max-w-7xl px-5 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Đã thay thế logo cũ bằng SVG mới, đẹp và không bị lỗi -->
+        <div class="w-9 h-9 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full"><path fill="#22d3ee" d="M50 0L100 25V75L50 100L0 75V25L50 0Z"></path><path fill="white" d="M50 15L85 32.5V67.5L50 85L15 67.5V32.5L50 15Z"></path><path fill="#0d1117" d="M50 22L78 36.5V63.5L50 78L22 63.5V36.5L50 22Z"></path></svg>
+        </div>
+        <h1 class="text-xl md:text-2xl font-bold tracking-tight text-white">PREMIUM SHOP</h1>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
+        <a class="hover:text-white transition-colors" href="#san-pham">Sản phẩm</a>
+        <a class="hover:text-white transition-colors" href="#uu-diem">Ưu điểm</a>
+        <a class="hover:text-white transition-colors" href="#lien-he">Liên hệ</a>
+      </nav>
+      <a href="https://zalo.me/nvantien09" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold transition-colors shadow-lg shadow-cyan-500/20">Hỗ trợ 24/7</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto max-w-7xl px-5 py-12 md:py-20">
+    <!-- Hero Section -->
+    <section class="text-center mb-20 md:mb-28">
+      <div class="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full badge text-xs text-gray-300 mb-4">
+        <span>Uy tín · Bảo hành 1 đổi 1 · Giao nhanh</span>
+      </div>
+      <h2 class="reveal text-4xl md:text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-500 tracking-tight" style="transition-delay: 100ms;">
+        Tài Khoản Premium Giá Rẻ
+      </h2>
+      <p class="reveal max-w-3xl mx-auto text-lg md:text-xl text-gray-400 leading-relaxed" style="transition-delay: 200ms;">
+        Nâng tầm trải nghiệm giải trí & làm việc với các dịch vụ premium hàng đầu. Hỗ trợ tận tâm, kích hoạt trong vài phút.
+      </p>
+       <div class="reveal mt-8 flex justify-center items-center gap-4" style="transition-delay: 300ms;">
+        <a href="#san-pham" class="px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all transform hover:scale-105">
+          Xem tất cả sản phẩm
+        </a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="uu-diem" class="mb-20 md:mb-28">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Đã thay thế các ảnh bằng SVG nội tuyến để không bị lỗi và tải nhanh hơn -->
+            <div class="reveal card rounded-xl p-5 flex items-center gap-4">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center border border-blue-500/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div><h3 class="font-semibold text-white">Bảo hành 1 đổi 1</h3><p class="text-sm text-gray-400">Hỗ trợ trong suốt hạn dùng.</p></div>
+            </div>
+            <div class="reveal card rounded-xl p-5 flex items-center gap-4" style="transition-delay: 100ms">
+                <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center border border-green-500/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                </div>
+                <div><h3 class="font-semibold text-white">Giao hàng siêu tốc</h3><p class="text-sm text-gray-400">Nhận tài khoản trong vài phút.</p></div>
+            </div>
+            <div class="reveal card rounded-xl p-5 flex items-center gap-4" style="transition-delay: 200ms">
+                <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center border border-purple-500/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8.68a9 9 0 10-12.01.01m12.01-.01A9 9 0 116 8.68m12.01-.01L18 2m-6 6.68V2m0 12.32a9 9 0 110-12.01m0 12.01V22m-6-13.32L6 2m0 12.32L2 14.32m12 .01L22 14.32"></path></svg>
+                </div>
+                <div><h3 class="font-semibold text-white">Hỗ trợ 24/7</h3><p class="text-sm text-gray-400">Luôn sẵn sàng giải đáp.</p></div>
+            </div>
+            <div class="reveal card rounded-xl p-5 flex items-center gap-4" style="transition-delay: 300ms">
+                <div class="w-12 h-12 bg-sky-500/10 rounded-lg flex items-center justify-center border border-sky-500/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                </div>
+                <div><h3 class="font-semibold text-white">Thanh toán đa dạng</h3><p class="text-sm text-gray-400">Momo, ZaloPay, Banking...</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="san-pham">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
+        <!-- Netflix -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #E50914;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background:#E50914;">
+            <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="Netflix" src="https://cdn.simpleicons.org/netflix/white" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">Netflix Premium</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Xem phim 4K Ultra HD, profile riêng tư, không quảng cáo.</p>
+          <a href="netflix.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+        <!-- Spotify -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #1DB954; transition-delay: 50ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background:#1DB954;">
+            <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="Spotify" src="https://cdn.simpleicons.org/spotify/white" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">Spotify Premium</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Nghe nhạc không quảng cáo, chất lượng âm thanh cao nhất.</p>
+          <a href="spotify.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+        <!-- YouTube -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #FF0000; transition-delay: 100ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background:#FF0000;">
+            <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="YouTube" src="https://cdn.simpleicons.org/youtube/white" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">YouTube Premium</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Xem video không quảng cáo, phát trong nền, tải video.</p>
+          <a href="youtube.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+        <!-- ChatGPT Plus -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #74AA9C; transition-delay: 150ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background-color: #10a37f;">
+            <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="OpenAI / ChatGPT" src="https://cdn.simpleicons.org/openai/white" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">ChatGPT Plus</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Truy cập GPT-4o, DALL-E 3, tốc độ phản hồi nhanh hơn.</p>
+          <<a href="youtube.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+        
+        <!-- Capcut Pro -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #00c853; transition-delay: 200ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center p-3" style="background-color: #0d1117;">
+             <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="Capcut" src="https://i.ibb.co/bF0J7T3/capcut-logo.png" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">Capcut Pro</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Chỉnh sửa video chuyên nghiệp, không watermark, nhiều hiệu ứng.</p>
+         <a href="capcut.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+        <!-- Canva -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #00C4CC; transition-delay: 250ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background-color: #005356;">
+            <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="Canva" src="https://cdn.simpleicons.org/canva/white" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">Canva Pro</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Công cụ thiết kế đồ họa mạnh mẽ, kho tài nguyên khổng lồ.</p>
+          <a href="canva.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+        <!-- Duolingo -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #58CC02; transition-delay: 300ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background:#58CC02;">
+            <img class="brand-icon transition-transform group-hover:scale-110 p-2" loading="lazy" alt="Duolingo" src="https://cdn.simpleicons.org/duolingo/white" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">Duolingo Plus</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Học ngoại ngữ không giới hạn, không quảng cáo, luyện thi.</p>
+         <a href="duolingo.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+        <!-- Google One -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #4285F4; transition-delay: 350ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background-color: #e8f0fe;">
+             <svg class="brand-icon transition-transform group-hover:scale-110" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google One</title><path fill="#4285F4" d="M9.31 6.355v1.652h3.812c-.247 1.517-1.552 3.46-3.812 3.46-2.29 0-4.15-1.896-4.15-4.225s1.86-4.225 4.15-4.225c1.284 0 2.14.545 2.635 1.01l1.39-1.339c-.896-.83-2.03-1.336-3.99-1.336-3.313 0-6 2.687-6 6s2.687 6 6 6c3.466 0 5.82-2.422 5.82-5.918 0-.392-.044-.71-.09-.99H9.31zM24 11.24v2.52h-2.52v-2.52H18.96v-2.52h2.52V6.2h2.52v2.52H24z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">Google One 2TB</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Lưu trữ đám mây an toàn, dung lượng lớn, kèm VPN.</p>
+          <a href="ggone.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+        <!-- Cursor Pro -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #4D8BFF; transition-delay: 400ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center p-3" style="background-color: #0E1325;">
+             <svg class="brand-icon transition-transform group-hover:scale-110" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Cursor</title><path d="M11.64 1.015c.29-.39.82-.39.1.1 0l10.345 13.793a.6.6 0 01-.475.992H1.49a.6.6 0 01-.475-.992L11.64 1.015zm.36 21.97c-.29.39-.82.39-1.11 0L.545 9.207a.6.6 0 01.475-.992h22.02a.6.6 0 01.475.992l-10.345 13.79z" fill="#FFFFFF"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">Cursor Pro</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Trình soạn thảo mã nguồn AI đầu tiên, xây dựng cho lập trình viên.</p>
+          <a href="curror.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+        
+        <!-- ĐÃ THÊM: ChatGPT Pro -->
+        <div class="reveal card group rounded-2xl p-6 flex flex-col items-center text-center" style="--brand-color: #74AA9C; transition-delay: 450ms;">
+          <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background-color: #10a37f;">
+            <img class="brand-icon transition-transform group-hover:scale-110" loading="lazy" alt="OpenAI / ChatGPT" src="https://cdn.simpleicons.org/openai/white" />
+          </div>
+          <h3 class="text-lg font-bold mt-5 text-white">ChatGPT Pro</h3>
+          <p class="text-gray-400 text-sm mt-1 mb-4 flex-grow">Dành cho doanh nghiệp, ưu tiên các tính năng mới nhất.</p>
+          <a href="chatgpt-pro.html" class="price-button mt-auto px-5 py-2 rounded-lg text-white text-sm font-bold">
+   Mua ngay
+</a>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="lien-he" class="bg-bg-secondary mt-16 py-16 border-t border-border-color">
+    <div class="container mx-auto max-w-7xl px-5">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <h4 class="font-semibold text-white mb-3 text-lg">PREMIUM SHOP</h4>
+          <p class="text-gray-400 text-sm">Uy tín - Chất lượng - Nhanh chóng. Cam kết hỗ trợ và bảo hành trong suốt thời gian sử dụng.</p>
+        </div>
+        <div class="grid grid-cols-2 md:col-span-2 gap-8">
+            <div>
+              <h4 class="font-semibold text-white mb-3 text-lg">Liên hệ</h4>
+              <ul class="text-gray-400 text-sm space-y-2">
+                <li><a class="flex items-center gap-2 hover:text-cyan-400 transition-colors" href="zalo.me/nvantien09" target="_blank" rel="noopener">Zalo: Băp lor</a></li>
+                <li><a class="flex items-center gap-2 hover:text-cyan-400 transition-colors" href="#" target="_blank" rel="noopener">Facebook: Fanpage support24/7</a></li>
+                <li><a class="flex items-center gap-2 hover:text-cyan-400 transition-colors" href="mailto:support@example.com">Email: BAPLOR </a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3 text-lg">Chính sách</h4>
+              <ul class="text-gray-400 text-sm space-y-2">
+                <li><span class="flex items-center gap-2">Bảo hành 1 đổi 1</span></li>
+                <li><span class="flex items-center gap-2">Hoàn tiền nếu có lỗi</span></li>
+                <li><span class="flex items-center gap-2">Bảo mật thông tin khách hàng</span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-border-color">
+       
+        © 2025 PREMIUM SHOP. All Rights Reserved.
+<span id="view-count" class="ml-2 text-gray-400"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer để tạo hiệu ứng xuất hiện khi cuộn
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Thông Báo</title>
+    <!-- Tích hợp Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tùy chỉnh font chữ Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Sử dụng font Inter làm font chữ mặc định */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style cho modal khi ẩn */
+        .modal-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+    <!-- Modal Thông Báo -->
+    <div id="notificationModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50">
+        <div class="bg-[#20242b] text-gray-200 rounded-xl shadow-2xl w-full max-w-lg transform transition-all duration-300 scale-100">
+            <!-- Phần đầu của Modal -->
+            <div class="flex items-center justify-between p-5 border-b border-gray-700">
+                <h2 class="text-xl font-bold text-white">Thông Báo Chung</h2>
+                <button id="closeModalButton" class="text-gray-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Nội dung Modal -->
+            <div class="p-6 space-y-4 text-sm leading-relaxed">
+                <p><span class="text-red-500 mr-2">💥</span> Chào mừng bạn đã đến với shopprenium hệ thống seeding hàng đầu Việt Nam</p>
+                <p><span class="text-yellow-400 mr-2">⭐</span> Link Box <b class="text-blue-400">Zalo</b> Thông Báo 1 : <a href="https://zalo.me/g/oqrjcw821" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
+                <p><span class="text-yellow-400 mr-2">⭐</span> Link <b class="text-blue-400">Botchat</b> Thông Báo 2 : <a href="https://web.facebook.com/share/19DFeiofSn/?mibextid=wwXIfr&_rdc=1&_rdr" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
+                <p><b>Admin Support 24/7 Tại Zalo</b> : <a href="https://zalo.me/nvantien09" class="font-semibold text-green-400 hover:underline">Tại Đây</a></p>
+                
+                <ul class="list-inside list-disc space-y-2 pl-2 pt-2">
+                    <li>Đọc Kĩ Điều Khoản Trước Khi Mua Hàng</li>
+                    <li>Đơn Hàng Sẽ Được Hủy Trong 24-72h <b class="text-red-400">Nếu</b> Có Thể</li>
+                    <li>Hỗ Trợ Tăng Tốc, Đẩy Và Hủy Đơn Nếu Cần.</li>
+                </ul>
+
+                <p class="pt-2"><span class="text-red-500 mr-2">❤️</span> Chúc Quý Khách Sử Dụng Dịch Vụ Vui Vẻ, ShopPrenium Luôn Sẵn Sàng Hỗ Trợ Mọi Người <span class="ml-1">✨</span></p>
+            </div>
+
+            <!-- Phần chân của Modal -->
+            <div class="flex justify-end p-5">
+                <button id="confirmButton" class="bg-teal-600 text-white font-bold py-2.5 px-6 rounded-lg hover:bg-teal-700 transition-all duration-300 disabled:bg-gray-500 disabled:cursor-not-allowed">
+                    Tôi đã đọc (3)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('notificationModal');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const confirmButton = document.getElementById('confirmButton');
+
+        // Hàm đóng modal
+        const closeModal = () => {
+            modal.classList.add('modal-hidden');
+        };
+
+        // Gán sự kiện click cho các nút đóng
+        closeModalButton.addEventListener('click', closeModal);
+        confirmButton.addEventListener('click', () => {
+            // Chỉ đóng nếu nút đã được kích hoạt
+            if (!confirmButton.disabled) {
+                closeModal();
+            }
+        });
+
+        // Xử lý đếm ngược
+        let countdown = 3;
+        confirmButton.disabled = true;
+
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            if (countdown > 0) {
+                confirmButton.textContent = `Tôi đã đọc (${countdown})`;
+            } else {
+                clearInterval(countdownInterval);
+                confirmButton.textContent = 'Tôi đã đọc';
+                confirmButton.disabled = false;
+                confirmButton.classList.remove('disabled:bg-gray-500', 'disabled:cursor-not-allowed');
+            }
+        }, 1000);
+
+    </script>
+
+</body>
+<script>
+(function(){
+  // Chặn chuột phải
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert("🚫 Không được phép!");
+  });
+
+  // Chặn F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S, Ctrl+Shift+C
+  document.onkeydown = function(e) {
+    if (e.keyCode == 123) { // F12
+      alert("🚫 DevTools bị vô hiệu hóa!");
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67)) {
+      alert("🚫 DevTools bị vô hiệu hóa!");
+      return false;
+    }
+    if (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83)) {
+      alert("🚫 Nút này đã bị khóa!");
+      return false;
+    }
+  };
+
+  // Chặn mở DevTools bằng cách phát hiện thay đổi console
+  setInterval(function() {
+    var before = new Date().getTime();
+    debugger;
+    var after = new Date().getTime();
+    if (after - before > 200) {
+      alert("🚫 DevTools đang mở!");
+      window.location.href = "about:blank"; // đá ra trắng
+    }
+  }, 1000);
+})();
+</script>
+
+</html>
+

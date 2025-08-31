@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - PREMIUM SHOP</title>
+    <meta name="description" content="Hướng dẫn thanh toán tại PREMIUM SHOP - Uy tín, nhanh chóng, bảo hành 1 đổi 1.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="PREMIUM SHOP - Hướng Dẫn Thanh Toán">
+    <meta property="og:description" content="Thanh toán dễ dàng qua ngân hàng hoặc Zalo/Telegram. Bảo hành 1 đổi 1.">
+    <meta property="og:image" content="https://drive.google.com/thumbnail?id=1DyxVzdNxY4TSdR902Zrjp3NYfaOYp9cA&sz=w600">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #0D1117;
+        }
+
+        .header-gradient {
+            background: linear-gradient(90deg, rgba(13,17,23,1) 0%, rgba(22,27,34,1) 50%, rgba(13,17,23,1) 100%);
+        }
+
+        .card-bg {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+        }
+    </style>
+</head>
+
+<body class="text-gray-200">
+
+    <!-- Header -->
+    <header class="header-gradient border-b border-[#30363D] sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+            <h1 class="text-4xl font-extrabold tracking-wider text-white">PREMIUM SHOP</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-500">Hướng Dẫn Thanh Toán</h2>
+                <p class="text-lg text-gray-400">Vui lòng làm theo các bước dưới đây để hoàn tất đơn hàng.</p>
+            </div>
+
+            <div class="card-bg rounded-lg p-8 space-y-8">
+                <!-- Payment Methods -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">Các Phương Thức Thanh Toán</h3>
+                    <div class="space-y-6">
+                        <!-- Zalo/Telegram -->
+                        <div>
+                            <h4 class="font-semibold text-cyan-400 text-lg">1. Zalo / Telegram</h4>
+                            <p class="ml-4 text-white flex items-center gap-3">
+                                Link Zalo: 
+                                <a href="https://zalo.me/nvantien09" target="_blank" 
+                                   class="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-3 py-1 rounded-lg transition">
+                                   Truy cập
+                                </a>
+                            </p>
+                            <p class="ml-4 text-gray-400 text-sm">(Bạn có thể nhắn tin trực tiếp để được hỗ trợ nhanh nhất)</p>
+                        </div>
+                        
+                        <!-- Bank Transfer & QR Code -->
+                        <div>
+                            <h4 class="font-semibold text-cyan-400 text-lg">2. Chuyển khoản Ngân hàng (Quét mã QR)</h4>
+                            <div class="mt-4 flex flex-col md:flex-row items-center gap-8 bg-gray-800/50 p-6 rounded-lg">
+                                <!-- QR Code Image -->
+                                <div class="w-48 h-48 flex-shrink-0">
+                                    <img src="https://drive.google.com/thumbnail?id=1DyxVzdNxY4TSdR902Zrjp3NYfaOYp9cA&sz=w600" 
+                                         alt="Mã QR Thanh Toán PREMIUM SHOP" 
+                                         class="w-full h-full object-contain rounded-md">
+                                </div>
+                                <!-- Bank Info -->
+                                <div class="flex-grow">
+                                    <p class="text-center md:text-left text-gray-400 mb-4">Quét mã QR ở trên bằng ứng dụng ngân hàng của bạn để thanh toán nhanh chóng và chính xác.</p>
+                                    <ul class="space-y-3">
+                                        <li>
+                                            <span class="text-gray-400">Ngân hàng:</span>
+                                            <span class="font-mono bg-gray-700 px-2 py-1 rounded text-white">MBBANK</span>
+                                        </li>
+                                        <li class="flex items-center gap-3">
+                                            <span class="text-gray-400">Số tài khoản:</span>
+                                            <span class="font-mono bg-gray-700 px-2 py-1 rounded text-white">020612345678</span>
+                                            <button onclick="copyToClipboard('SỐ_TÀI_KHOẢN', this)" 
+                                                    class="bg-gray-600 hover:bg-gray-500 text-sm px-2 py-1 rounded transition">
+                                                📋 Copy
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <span class="text-gray-400">CHỦ TÀI KHOẢN :</span>
+                                            <span class="font-mono bg-gray-700 px-2 py-1 rounded text-white">NGUYEN VAN TIEN</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Notes -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">Lưu Ý Quan Trọng</h3>
+                    <ul class="space-y-3 text-gray-300 list-disc list-inside">
+                        <li><span class="font-bold text-yellow-400">Nội dung chuyển khoản:</span> Ghi rõ <span class="font-mono bg-gray-700 px-2 py-1 rounded">Tên bạn + Tên sản phẩm</span> (Ví dụ: Nguyen Van A mua Netflix).</li>
+                        <li><span class="font-bold text-yellow-400">Xác nhận đơn hàng:</span> Sau khi chuyển khoản thành công, vui lòng <span class="font-bold">chụp lại màn hình giao dịch</span> và gửi qua Zalo/Telegram để chúng tôi xác nhận.</li>
+                        <li><span class="font-bold text-yellow-400">Thời gian xử lý:</span> Tài khoản sẽ được gửi cho bạn trong vòng <span class="font-bold">5-10 phút</span> sau khi chúng tôi nhận được thanh toán.</li>
+                        <li><span class="font-bold text-yellow-400">Chính sách bảo hành:</span> Tất cả tài khoản đều được <span class="font-bold">bảo hành 1 đổi 1</span> trong suốt thời gian sử dụng nếu có lỗi phát sinh từ phía chúng tôi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="index.html" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300">
+                    &larr; Quay lại trang chủ
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="header-gradient mt-16 py-8 border-t border-[#30363D]">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 PREMIUM SHOP. All Rights Reserved.</p>
+            <p class="mt-1">Uy tín - Chất lượng - Nhanh chóng</p>
+        </div>
+    </footer>
+
+    <!-- Script copy -->
+    <script>
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text);
+            btn.innerText = "✅ Đã sao chép";
+            setTimeout(() => {
+                btn.innerText = "📋 Copy";
+            }, 2000);
+        }
+    </script>
+
+</body>
+
+</html>
